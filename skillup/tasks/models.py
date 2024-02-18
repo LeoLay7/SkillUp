@@ -7,8 +7,7 @@ import tasks.tools
 
 class Subject(django.db.models.Model):
     title = django.db.models.CharField(
-        max_length=40,
-        verbose_name="название предмета"
+        max_length=40, verbose_name="название предмета"
     )
 
 
@@ -29,8 +28,7 @@ class Test(django.db.models.Model):
         verbose_name="информация о заданиях",
     )
     many_solutions = django.db.models.BooleanField(
-        default=False,
-        verbose_name="можно ли пройти тест несколько раз?"
+        default=False, verbose_name="можно ли пройти тест несколько раз?"
     )
 
 
@@ -56,7 +54,7 @@ class Images(django.db.models.Model):
         verbose_name="Тест",
         related_name="images",
         blank=True,
-        null=True
+        null=True,
     )
     task = django.db.models.SmallIntegerField(
         verbose_name="номер задания",

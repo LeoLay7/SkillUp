@@ -32,5 +32,5 @@ class User(django.contrib.auth.models.AbstractUser):
         max_length=3,
         validators=[
             users.validators.school_class_validator,
-            ],
+        ],
     )
